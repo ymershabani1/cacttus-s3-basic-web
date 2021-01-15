@@ -10,7 +10,7 @@
 <body>
     <center>
         <img width="400" src="/Trello-logo.png"></img>
-        <form method="POST" action=""></form>
+        <form method="POST" action="">
         <label>Email:</label><br>
         <input type="email" name="email"/><br><br>
         <label>Password:</label><br>
@@ -18,7 +18,7 @@
         <input type="submit" value="Login">
         </form>
         <br><br>
-        <a href="/task-management-tool/register.php">Create new account!</a>
+        <a href="/cacttus-s3-basic-web/task-management-tool/register.php">Create new account!</a>
         
     </center>
 </body>
