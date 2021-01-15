@@ -1,12 +1,12 @@
 <?php
-session_start();
-require_once "util.php";
+// session_start();
+// require_once "util.php";
 
-// if logged in then redirect to timeline.php
-if (isUserLoggedIn()) {
-    header("Location: /social-network-db/timeline.php");
-    die();
-}
+// // if logged in then redirect to timeline.php
+// if (isUserLoggedIn()) {
+//     header("Location: /social-network-db/timeline.php");
+//     die();
+// }
 ?>
 <html>
 
