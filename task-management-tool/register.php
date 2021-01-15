@@ -1,13 +1,3 @@
-<?php
-session_start();
-require_once "util.php";
-
-// if logged in then redirect to timeline.php
-if (isUserLoggedIn()) {
-    header("Location: /social-network-db/timeline.php");
-    die();
-}
-?>
 <html>
 
 <head>
@@ -16,8 +6,8 @@ if (isUserLoggedIn()) {
 
 <body>
     <center>
-        <img width="400" src="https://cacttus.education/wp-content/uploads/2019/07/fb_CACTTUS_logo.png"> </img>
-        <form method="POST" action="/social-network-db/register_logic.php">
+        <img width="400" src="/Trello-Logo.png"> </img>
+        <form method="POST" action="">
             <label>Full Name:</label><br>
             <input type="text" name="full_name" /><br>
             <label>E-mail:</label><br>
@@ -27,7 +17,7 @@ if (isUserLoggedIn()) {
             <input type="submit" value="Register" />
         </form>
         <br>
-        <a href="/social-network-db/">Login if you already have an account!</a>
+        <a href="/task-management-tool/">Login if you already have an account!</a>
     </center>
 </body>
 
