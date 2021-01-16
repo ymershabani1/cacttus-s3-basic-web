@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+require_once "util.php";
+
 ?>
 
 <html>
@@ -11,7 +14,7 @@
 <body>
     <center>
         <img width="400" src="/Trello-Logo.png"> </img>
-        <form method="POST" action="">
+        <form method="POST" action="/cacttus-s3-basic-web/task-management-tool/register_logic.php">
             <label>Full Name:</label><br>
             <input type="text" name="full_name" /><br><br>
             <label>E-mail:</label><br>
