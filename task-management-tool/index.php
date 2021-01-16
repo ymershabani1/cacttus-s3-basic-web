@@ -18,8 +18,7 @@
         <input type="submit" value="Login">
         </form>
         <br><br>
-        <a href="/cacttus-s3-basic-web/task-management-tool/register.php">Create new account!</a>
-        
+        <a href="/cacttus-s3-basic-web/task-management-tool/register.php">Create new account!</a>     
     </center>
 </body>
 </html>
