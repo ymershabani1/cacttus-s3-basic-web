@@ -1,5 +1,13 @@
 <?php
 
+session_start();
+require_once "util.php";
+
+if(isUserLoggedIn()){
+    header("Location: /cacttus-s3-basic-web/task-management-tool/add-task.php");
+    die();
+}
+
 ?>
 
 
@@ -10,7 +18,7 @@
 <body>
     <center>
         <img width="400" src="/Trello-logo.png"></img>
-        <form method="POST" action="">
+        <form method="POST" action="/cacttus-s3-basic-web/task-management-tool/login_logic.php">
         <label>Email:</label><br>
         <input type="email" name="email"/><br><br>
         <label>Password:</label><br>

@@ -17,6 +17,6 @@ $user = [
 
 storeUserToFile($user);
 
-echo "Welcom to Trello. Click <a href='/cacttus-s3-basic-web/task-management-tool/'>here</a> to login"
+echo "Welcome to Trello. Click <a href='/cacttus-s3-basic-web/task-management-tool/'>here</a> to login"
 
 ?>
