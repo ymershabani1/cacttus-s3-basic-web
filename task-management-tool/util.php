@@ -84,6 +84,21 @@
 
     }
 
+    function getUserPosts($userId){
+        global $dbConnection;
+
+        $sqlQuery = "SELECT * FROM `tasks` WHERE `user_id`=:user_id ORDER BY `status` DESC";
+        $statement = $dbConnection-> $dbConnection->prepare($sqlQuery);
+        $statement-> bindParam(":user_id", $userId);
+
+        if($statement->execute()){
+            $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $posts;
+        }else{
+            return [];
+        }
+    }
+
 
 
 ?>
