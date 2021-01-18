@@ -3,14 +3,17 @@
 session_start();
 require_once "util.php";
 
+if(isUserLoggedIn()){
+    header("Location: /cacttus-s3-basic-web/task-management-tool/add-task.php");
+    die();
+}
 
-
-$fullName = $_POST['full_name'];
+$fullName = $_POST['fullName'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 
 $user = [
-    'full_name' => $fullName,
+    'fullName' => $fullName,
     'email' => $email,
     'password' => $password,
 ];
