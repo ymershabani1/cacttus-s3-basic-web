@@ -19,11 +19,11 @@ if(isUserLoggedIn()){
 <body>
     <center>
         <img width="400" src="/Trello-logo.png"></img>
-        <form  method="POST" action="/cacttus-s3-basic-web/task-management-tool/login_logic.php">
+        <form>
             <label>Email:</label><br>
-            <input id="login_email" type="email" name="email"/><br><br>
+            <input id="email" type="email" name="email"/><br><br>
             <label>Password:</label><br>
-            <input id="login_password" type="password" name="password"/><br><br>
+            <input id="password" type="password" name="password"/><br><br>
             <input type="submit" value="Log In" id="btnLogin">
         </form>
         <br><br>
@@ -34,10 +34,10 @@ if(isUserLoggedIn()){
 
 $(document).ready(function(){
     $("#btnLogin").click(function(){
-        var email = $("#login_email").val();
-        var password = $("#login_password").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
 
-        if(email!="" && password!==){
+        if(email!="" && password!==""){
             $.ajax({
                 url: '/cacttus-s3-basic-web/task-management-tool/login_logic.php',
                 method: 'POST',
@@ -46,17 +46,13 @@ $(document).ready(function(){
                     password: password
                 },
                 success: function(response){
-                    if(response=="success"){
                         window.location.href="/cacttus-s3-basic-web/task-management-tool/add-task.php";
-                    }else{
-                        alert("Wrong Details!")
-                    }
-
+                    
                 }
             })
         }
-    })
-})
+    });
+});
 
 
 </script>

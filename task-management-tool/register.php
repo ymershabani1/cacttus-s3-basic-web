@@ -19,7 +19,7 @@ if(isUserLoggedIn()){
 <body>
     <center>
         <img width="400" src="/Trello-Logo.png"> </img>
-        <form onsubmit="return register();">
+        <form>
             <label>Full Name:</label><br>
             <input type="text" name="fullName" id="fullName" /><br><br>
             <label>E-mail:</label><br>

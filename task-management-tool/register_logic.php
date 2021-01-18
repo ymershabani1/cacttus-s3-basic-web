@@ -18,6 +18,11 @@ $user = [
     'password' => $password,
 ];
 
+if(doesUserExistByEmail($email)){
+    echo "This user already exists";
+    die();
+}
+
 storeUserToFile($user);
 
 echo "Welcome to Trello. Click <a href='/cacttus-s3-basic-web/task-management-tool/'>here</a> to login"

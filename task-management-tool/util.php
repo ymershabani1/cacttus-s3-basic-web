@@ -43,6 +43,47 @@
         return null;
     }
 
+    function doesUserExistByEmail($email){
+        global $dbConnection;
+
+        return getUserByEmail($email) != null;
+    } 
+
+    function getUserByEmail($email){
+        global $dbConnection;
+
+        $sqlQuery = "SELECT * FROM `users` WHERE email=:email";
+        $statement = $dbConnection->prepare($sqlQuery);
+        $statement -> bindParam(':email', $email);
+        if($statement->execute()){
+            $user = $statement->fetch(PDO::FETCH_ASSOC);
+            if($user !== false){
+                return $user;
+            }
+        }
+        return null;
+    }
+
+    function storePostToFile(array $post, $userId){
+        global $dbConnection;
+
+        $sqlQuery = "INSERT INTO `tasks` (`title`, `description`,`status`, `user_id`)
+                        VALUES (:title, :description, :status, :user_id);";
+
+        $statement = $dbConnection->prepare($sqlQuery);
+        $statement ->bindParam(":title", $post['title']);
+        $statement->bindParam(":description", $post['description']);
+        $statement->bindParam(":status", $post['status']);
+        $statement->bindParam(":user_id", $userId);
+
+        if($statement->execute()){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
 
 
 ?>
